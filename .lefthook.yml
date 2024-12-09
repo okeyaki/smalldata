@@ -1,0 +1,21 @@
+pre-commit:
+  parallel: false
+  commands:
+    format_python:
+      glob: "*.py"
+      stage_fixed: true
+      run: |
+        ruff format {staged_files}
+    format-sql:
+      glob: "*.sql"
+      stage_fixed: true
+      run: |
+        sqlfluff fix {staged_files}
+    lint-python:
+      glob: "*.py"
+      run: |
+        ruff check {staged_files}
+    lint-sql:
+      glob: "*.sql"
+      run: |
+        sqlfluff lint {staged_files}

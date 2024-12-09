@@ -1,0 +1,14 @@
+default:
+  target: "default"
+  outputs:
+    default:
+      type: "duckdb"
+      path: "{{ env_var('DUCKDB_DIR') }}/default.db"
+      threads: 4
+example:
+  target: "default"
+  outputs:
+    default:
+      type: "duckdb"
+      path: "{{ env_var('DUCKDB_DIR') }}/example.db"
+      threads: 4

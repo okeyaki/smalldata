@@ -1,0 +1,31 @@
+version: 2
+models:
+  - name: "integration__developers"
+    columns:
+      - name: "id"
+        data_type: "INTEGER"
+        data_tests:
+          - "not_null"
+          - "unique"
+      - name: "name"
+        data_type: "VARCHAR"
+        data_tests:
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+      - name: "email"
+        data_type: "VARCHAR"
+        data_tests:
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+      - name: "role_id"
+        data_type: "INTEGER"
+        data_tests:
+          - "not_null"
+          - relationships:
+              to: "ref('base__user_roles')"
+              field: "id"
+      - name: "role_name"
+        data_type: "VARCHAR"
+        data_tests:
+          - "not_null"
+          - "dbt_utils.not_empty_string"

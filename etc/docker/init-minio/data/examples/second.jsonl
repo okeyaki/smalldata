@@ -1,0 +1,3 @@
+{"label": "second", "timestamp": "2024-01-01T00:00:00+00:00", "level": "INFO", "message": "Hello, World!"}
+{"label": "second", "timestamp": "2024-01-01T00:00:01+00:00", "level": "INFO", "message": "Hello, World!"}
+{"label": "second", "timestamp": "2024-01-01T00:00:02+00:00", "level": "INFO", "message": "Hello, World!"}

@@ -1,0 +1,23 @@
+# Smalldata
+/.smalldata/
+
+# Metaflow
+/.metaflow/
+
+# Python
+__pycache__/
+/.venv/
+/.python-version
+requirements.txt
+
+# Ruff
+/.ruff_cache/
+
+# dbt
+dbt_packages/
+logs/
+target/
+.user.yml
+
+# dotenv
+/.env
