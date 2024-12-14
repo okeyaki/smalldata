@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: "default"
+    schema: "source"
+    tables:
+      - name: "orders"
+        columns:
+          # ID
+          - name: "id"
+            data_type: "VARCHAR"
+          # References
+          - name: "customer"
+            data_type: "VARCHAR"
+            data_type: "TIMESTAMP"
+          - name: "store_id"
+            data_type: "VARCHAR"
+          # Numerics
+          - name: "subtotal"
+            data_type: "INTEGER"
+          - name: "tax_paid"
+            data_type: "INTEGER"
+          - name: "order_total"
+            data_type: "INTEGER"
+          # Times
+          - name: "ordered_at"

@@ -1,0 +1,32 @@
+version: 2
+models:
+  - name: "integration__stores"
+    config:
+      contract:
+        enforced: true
+    columns:
+      # ID
+      - name: "store_id"
+        data_type: "VARCHAR"
+        data_tests:
+          - "unique"
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+      # Texts
+      - name: "store_name"
+        data_type: "VARCHAR"
+        data_tests:
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+      # Numerics
+      - name: "store_tax_rate"
+        data_type: "DOUBLE"
+        data_tests:
+          - "not_null"
+          - dbt_expectations.expect_column_min_to_be_between:
+              min_value: 0.0
+      # Times
+      - name: "store_opening_time"
+        data_type: "TIMESTAMP WITH TIME ZONE"
+        data_tests:
+          - "not_null"

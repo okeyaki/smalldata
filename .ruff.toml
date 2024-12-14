@@ -1,0 +1,15 @@
+line-length = 200
+
+[format]
+preview = true
+
+
+[lint]
+# https://docs.astral.sh/ruff/rules/
+fixable = ["B", "COM", "E", "F", "I", "Q"]
+ignore = ["COM812"]
+select = ["B", "COM", "E", "F", "I", "Q"]
+
+[lint.isort]
+force-single-line = true
+order-by-type = false

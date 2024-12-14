@@ -1,0 +1,56 @@
+version: 2
+models:
+  - name: "mart__default__order_items"
+    config:
+      contract:
+        enforced: true
+    columns:
+      # ID
+      - name: "order_item_id"
+        data_type: "VARCHAR"
+        data_tests:
+          - "unique"
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+      # References
+      - name: "order_id"
+        data_type: "VARCHAR"
+        data_tests:
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+          - relationships:
+              to: "ref('integration__orders')"
+              field: "order_id"
+      - name: "product_id"
+        data_type: "VARCHAR"
+        data_tests:
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+          - relationships:
+              to: "ref('integration__products')"
+              field: "product_id"
+      # Texts
+      - name: "product_name"
+        data_type: "VARCHAR"
+        data_tests:
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+      - name: "product_description"
+        data_type: "VARCHAR"
+        data_tests:
+          - "not_null"
+      # Enumerations
+      - name: "product_type"
+        data_type: "VARCHAR"
+        data_tests:
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+          - accepted_values:
+              values:
+                - "beverage"
+                - "jaffle"
+      # Times
+      - name: "order_time"
+        data_type: "TIMESTAMP WITH TIME ZONE"
+        data_tests:
+          - "not_null"

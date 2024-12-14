@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: "default"
+    schema: "source"
+    tables:
+      - name: "supplies"
+        columns:
+          # References
+          - name: "sku"
+            data_type: "VARCHAR"
+          - name: "id"
+            data_type: "VARCHAR"
+          # Texts
+          - name: "name"
+            data_type: "VARCHAR"
+          # Numerics
+          - name: "cost"
+            data_type: "INTEGER"
+          # Flags
+          - name: "perishable"
+            data_type: "BOOLEAN"

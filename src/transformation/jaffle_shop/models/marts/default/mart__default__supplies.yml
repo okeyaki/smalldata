@@ -1,0 +1,25 @@
+version: 2
+models:
+  - name: "mart__default__supplies"
+    config:
+      contract:
+        enforced: true
+    columns:
+      # ID
+      - name: "supply_id"
+        data_type: "VARCHAR"
+        data_tests:
+          - "unique"
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+      # Texts
+      - name: "supply_name"
+        data_type: "VARCHAR"
+        data_tests:
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+      # Flags
+      - name: "is_supply_perishable"
+        data_type: "BOOLEAN"
+        data_tests:
+          - "not_null"

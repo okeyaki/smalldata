@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: "default"
+    schema: "source"
+    tables:
+      - name: "products"
+        columns:
+          # ID
+          - name: "sku"
+            data_type: "VARCHAR"
+          # Texts
+          - name: "name"
+            data_type: "VARCHAR"
+          - name: "description"
+            data_type: "VARCHAR"
+          # Enumerations
+          - name: "type"
+            data_type: "VARCHAR"
+          # Numerics
+          - name: "price"
+            data_type: "INTEGER"
