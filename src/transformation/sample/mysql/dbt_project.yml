@@ -1,0 +1,31 @@
+name: "sample"
+
+version: "1.0.0"
+
+profile: "sample"
+
+clean-targets:
+  - "dbt_packages"
+  - "target"
+
+analysis-paths:
+  - "analyses"
+
+macro-paths:
+  - "macros"
+
+model-paths:
+  - "models"
+
+seed-paths:
+  - "seeds"
+
+snapshot-paths:
+  - "snapshots"
+
+test-paths:
+  - "tests"
+
+models:
+  sample:
+    +materialized: view
