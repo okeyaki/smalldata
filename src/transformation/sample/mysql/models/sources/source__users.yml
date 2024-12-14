@@ -1,0 +1,29 @@
+version: 2
+sources:
+  - name: "mysql"
+    schema: "source__mysql"
+    tables:
+      - name: "users"
+        columns:
+          - name: "id"
+            data_type: "INTEGER"
+            data_tests:
+              - "not_null"
+              - "unique"
+          - name: "role_id"
+            data_type: "INTEGER"
+            data_tests:
+              - "not_null"
+              - relationships:
+                  to: "ref('base__user_roles')"
+                  field: "id"
+          - name: "name"
+            data_type: "VARCHAR"
+            data_tests:
+              - "not_null"
+              - "dbt_utils.not_empty_string"
+          - name: "email"
+            data_type: "VARCHAR"
+            data_tests:
+              - "not_null"
+              - "dbt_utils.not_empty_string"
