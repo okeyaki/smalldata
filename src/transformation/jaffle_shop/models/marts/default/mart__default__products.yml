@@ -1,0 +1,44 @@
+version: 2
+models:
+  - name: "mart__default__products"
+    config:
+      contract:
+        enforced: true
+    columns:
+      # ID
+      - name: "product_id"
+        data_type: "VARCHAR"
+        data_tests:
+          - "unique"
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+      # Texts
+      - name: "product_name"
+        data_type: "VARCHAR"
+        data_tests:
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+      - name: "product_description"
+        data_type: "VARCHAR"
+        data_tests:
+          - "not_null"
+      # Enumerations
+      - name: "product_type"
+        data_type: "VARCHAR"
+        data_tests:
+          - accepted_values:
+              values:
+                - "beverage"
+                - "jaffle"
+      - name: "product_price"
+        data_type: "INTEGER"
+        data_tests:
+          - "not_null"
+          - dbt_expectations.expect_column_min_to_be_between:
+              min_value: 0
+      - name: "product_supply_cost"
+        data_type: "INTEGER"
+        data_tests:
+          - "not_null"
+          - dbt_expectations.expect_column_min_to_be_between:
+              min_value: 0

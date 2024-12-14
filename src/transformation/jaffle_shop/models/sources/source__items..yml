@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: "default"
+    schema: "source"
+    tables:
+      - name: "items"
+        columns:
+          # ID
+          - name: "id"
+            data_type: "VARCHAR"
+          # References
+          - name: "order_id"
+            data_type: "VARCHAR"
+          - name: "sku"
+            data_type: "VARCHAR"

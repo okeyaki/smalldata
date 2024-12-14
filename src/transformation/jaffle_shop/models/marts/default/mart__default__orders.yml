@@ -1,0 +1,22 @@
+version: 2
+models:
+  - name: "mart__default__orders"
+    config:
+      contract:
+        enforced: true
+    columns:
+      # ID
+      - name: "order_id"
+        data_type: "VARCHAR"
+        data_tests:
+          - "unique"
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+      # Numerics
+      - name: "num_order_items"
+        data_type: "INTEGER"
+        data_tests:
+          - "not_null"
+          - dbt_expectations.expect_column_min_to_be_between:
+              min_value: 0
+

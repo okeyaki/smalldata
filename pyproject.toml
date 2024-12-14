@@ -1,0 +1,50 @@
+[project]
+name = "smalldata"
+
+version = "0.1.0"
+
+description = "A very small data platform that is runnable on a local machine"
+
+requires-python = "== 3.12.*"
+
+
+[dependency-groups]
+core = [
+  "dbt-core == 1.8.9",
+  "dbt-duckdb == 1.9.1",
+  "dbt-metricflow == 0.7.1",
+  "duckdb == 1.3.0",
+  "invoke == 2.2.0",
+  "ipykernel == 6.29.5",
+  "jupyter == 1.1.1",
+  "streamlit == 1.40.2",
+]
+
+core-dev = [
+  "lefthook == 1.8.2",
+  "nb-clean == 4.0.1",
+  "ruff == 0.7.4",
+  "sqlfluff == 3.2.5",
+  "sqlfluff-templater-dbt == 3.2.5",
+]
+
+lib = [
+]
+
+user = [
+  "kagglehub == 0.3.6",
+  "pandas == 2.2.3",
+  "plotly == 5.24.1",
+  "pygwalker == 0.4.9.13",
+  "pymysql == 1.1.1",
+  "s3fs == 2024.10.0",
+]
+
+
+[tool.uv]
+default-groups = [
+  "core",
+  "core-dev",
+  "lib",
+  "user",
+]

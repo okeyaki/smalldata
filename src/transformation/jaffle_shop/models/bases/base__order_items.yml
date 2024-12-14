@@ -1,0 +1,31 @@
+version: 2
+models:
+  - name: "base__order_items"
+    config:
+      contract:
+        enforced: true
+    columns:
+      # ID
+      - name: "order_item_id"
+        data_type: "VARCHAR"
+        data_tests:
+          - "unique"
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+      # References
+      - name: "order_id"
+        data_type: "VARCHAR"
+        data_tests:
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+          - relationships:
+              to: "ref('base__orders')"
+              field: "order_id"
+      - name: "product_id"
+        data_type: "VARCHAR"
+        data_tests:
+          - "not_null"
+          - "dbt_utils.not_empty_string"
+          - relationships:
+              to: "ref('base__products')"
+              field: "product_id"

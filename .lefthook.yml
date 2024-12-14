@@ -1,0 +1,29 @@
+# https://evilmartians.github.io/lefthook/configuration/index.html
+pre-commit:
+  piped: true
+  commands:
+    clean_notebook_outputs:
+      glob: "*.ipynb"
+      stage_fixed: true
+      run: |
+        nb-clean clean {staged_files}
+    format_python:
+      glob: "*.py"
+      stage_fixed: true
+      run: |
+        ruff format {staged_files}
+    lint-python:
+      glob: "*.py"
+      run: |
+        ruff check {staged_files}
+    format-sql:
+      root: "src/transformation/jaffle_shop"
+      glob: "*.sql"
+      stage_fixed: true
+      run: |
+        sqlfluff fix {staged_files}
+    lint-sql:
+      root: "src/transformation/jaffle_shop"
+      glob: "*.sql"
+      run: |
+        sqlfluff lint {staged_files}
