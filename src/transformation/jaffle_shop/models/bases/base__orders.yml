@@ -1,0 +1,18 @@
+version: 2
+models:
+  - name: "base__orders"
+    columns:
+      - name: "order_id"
+        data_type: "VARCHAR"
+      - name: "store_id"
+        data_type: "VARCHAR"
+      - name: "customer_id"
+        data_type: "VARCHAR"
+      - name: "order_price"
+        data_type: "INTEGER"
+      - name: "order_subtotal_price"
+        data_type: "INTEGER"
+      - name: "order_tax"
+        data_type: "INTEGER"
+      - name: "order_time"
+        data_type: "TIMESTAMP"

@@ -1,0 +1,4 @@
+# dbt
+/dbt_packages/
+/macros/
+/target/

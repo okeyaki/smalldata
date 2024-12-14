@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: "mart__default__products"
+    columns:
+      - name: "proudct_id"
+        data_type: "VARCHAR"
+      - name: "product_name"
+        data_type: "VARCHAR"
+      - name: "product_description"
+        data_type: "VARCHAR"
+      - name: "product_type"
+        data_type: "VARCHAR"
+      - name: "product_price"
+        data_type: "INTEGER"

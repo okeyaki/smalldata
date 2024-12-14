@@ -1,0 +1,18 @@
+version: 2
+models:
+  - name: "mart__default__order_items"
+    columns:
+      - name: "order_item_id"
+        data_type: "VARCHAR"
+      - name: "order_id"
+        data_type: "VARCHAR"
+      - name: "product_id"
+        data_type: "VARCHAR"
+      - name: "product_name"
+        data_type: "VARCHAR"
+      - name: "product_description"
+        data_type: "VARCHAR"
+      - name: "product_type"
+        data_type: "VARCHAR"
+      - name: "order_time"
+        data_type: "TIMESTAMP"

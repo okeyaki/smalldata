@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: "mart__default__customers"
+    columns:
+      - name: "customer_id"
+        data_type: "VARCHAR"
+      - name: "customer_name"
+        data_type: "VARCHAR"
+      - name: "num_customer_lifetime_orders"
+        data_type: "INTEGER"
+      - name: "customer_first_order_time"
+        data_type: "TIMESTAMP"
+      - name: "customer_last_order_time"
+        data_type: "TIMESTAMP"

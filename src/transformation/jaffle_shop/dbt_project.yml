@@ -1,0 +1,31 @@
+name: "jaffle_shop"
+
+version: "1.0.0"
+
+profile: "jaffle_shop"
+
+clean-targets:
+  - "dbt_packages"
+  - "target"
+
+analysis-paths:
+  - "analyses"
+
+macro-paths:
+  - "macros"
+
+model-paths:
+  - "models"
+
+seed-paths:
+  - "seeds"
+
+snapshot-paths:
+  - "snapshots"
+
+test-paths:
+  - "tests"
+
+models:
+  jaffle_shop:
+    +materialized: view

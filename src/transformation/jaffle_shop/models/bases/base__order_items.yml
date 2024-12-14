@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: "base__order_items"
+    columns:
+      - name: "order_item_id"
+        data_type: "VARCHAR"
+      - name: "order_id"
+        data_type: "VARCHAR"
+      - name: "product_id"
+        data_type: "VARCHAR"

@@ -1,0 +1,8 @@
+version: 2
+models:
+  - name: "mart__default__orders"
+    columns:
+      - name: "order_id"
+        data_type: "VARCHAR"
+      - name: "num_order_items"
+        data_type: "INTEGER"

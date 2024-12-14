@@ -1,0 +1,12 @@
+version: 2
+models:
+  - name: "mart__default__stores"
+    columns:
+      - name: "store_id"
+        type: "VARCHAR"
+      - name: "store_name"
+        type: "VARCHAR"
+      - name: "store_tax_rate"
+        type: "FLOAT"
+      - name: "store_opening_time"
+        type: "TIMESTAMP"

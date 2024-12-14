@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: "default"
+    schema: "source"
+    tables:
+      - name: "supplies"
+        columns:
+          - name: "id"
+            data_type: "VARCHAR"
+          - name: "sku"
+            data_type: "VARCHAR"
+          - name: "name"
+            data_type: "VARCHAR"
+          - name: "cost"
+            data_type: "INTEGER"
+          - name: "perishable"
+            data_type: "BOOLEAN"

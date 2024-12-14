@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: "default"
+    schema: "source"
+    tables:
+      - name: "products"
+        columns:
+          - name: "sku"
+            data_type: "VARCHAR"
+          - name: "name"
+            data_type: "VARCHAR"
+          - name: "type"
+            data_type: "VARCHAR"
+          - name: "price"
+            data_type: "INTEGER"
+          - name: "description"
+            data_type: "VARCHAR"

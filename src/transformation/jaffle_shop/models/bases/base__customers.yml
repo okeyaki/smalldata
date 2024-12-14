@@ -1,0 +1,8 @@
+version: 2
+models:
+  - name: "base__customers"
+    columns:
+      - name: "customer_id"
+        data_type: "VARCHAR"
+      - name: "customer_name"
+        data_type: "VARCHAR"

@@ -1,0 +1,16 @@
+version: 2
+models:
+  - name: "mart__default__supply_costs"
+    columns:
+      - name: "supply_cost_id"
+        type: "VARCHAR"
+      - name: "supply_id"
+        type: "VARCHAR"
+      - name: "product_id"
+        type: "VARCHAR"
+      - name: "supply_name"
+        type: "VARCHAR"
+      - name: "supply_cost"
+        type: "INTEGER"
+      - name: "is_supply_perishable"
+        type: "BOOLEAN"

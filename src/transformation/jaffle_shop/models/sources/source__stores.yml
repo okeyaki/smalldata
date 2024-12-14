@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: "default"
+    schema: "source"
+    tables:
+      - name: "stores"
+        columns:
+          - name: "id"
+            data_type: "VARCHAR"
+          - name: "name"
+            data_type: "VARCHAR"
+          - name: "opened_at"
+            data_type: "TIMERSTAMP"
+          - name: "tax_rate"
+            data_type: "FLOAT"

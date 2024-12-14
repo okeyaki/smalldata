@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: "default"
+    schema: "source"
+    tables:
+      - name: "orders"
+        columns:
+          - name: "id"
+            data_type: "VARCHAR"
+          - name: "customer"
+            data_type: "VARCHAR"
+          - name: "-"
+            data_type: "VARCHAR"
+          - name: "subtotal"
+            data_type: "INTEGER"
+          - name: "tax_paid"
+            data_type: "INTEGER"
+          - name: "order_total"
+            data_type: "INTEGER"

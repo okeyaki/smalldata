@@ -1,0 +1,7 @@
+jaffle_shop:
+  target: "default"
+  outputs:
+    default:
+      type: "duckdb"
+      path: "{{ env_var('SD_DATA_DIR') }}/jaffle_shop.db"
+      threads: 4
